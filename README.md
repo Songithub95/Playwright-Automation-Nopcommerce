@@ -2,12 +2,10 @@
 
 ## 📦 Quick Start
 
-### Install dependencies
+### 1️⃣ Install dependencies
 ```bash
 npm install
 npx playwright install
-
-### Sripts to run locally
 
 ====================== STAGING ENV (multi-browser) ====================
 | Browser              | Command                        |
