@@ -6,7 +6,7 @@
 npm install
 npx playwright install
 
-====================== STAGING ENV (multi-browser) ======================
+====================== STAGING ENV (multi-browser) ====================
 | Browser              | Command                        |
 | -------------------- | ------------------------------ |
 | 🧭 Chrome (Chromium) | `npm run test:staging:chrome`  |
@@ -25,9 +25,10 @@ npx playwright install
 | All Browsers         | `npm run test:prod:all`     |
 | A specific tests     | `ENV=prod npx playwright test tests/search.spec.ts`|
 
-====================== REPORTS ======================
-
-Clean Allure & Playwright reports and results: `npm run clean`
-Open the Playwright HTML report: `npm run report`
-Open Allure report: `npm run report:allure`
+====================== REPORTS ========================================
+| Action              | Command                                    |
+| -------------------- | ----------------------------------------- |
+| Clean Allure & Playwright reports and results | `npm run clean`  |
+| Open the Playwright HTML report | `npm run report`               |
+| Open Allure report| `npm run report:allure`                      | 
 
