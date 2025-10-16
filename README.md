@@ -3,8 +3,8 @@
 ## 📦 Quick Start
 
 ### 1️⃣ Install dependencies
-npm install
-npx playwright install
+`npm install`
+`npx playwright install`
 
 ====================== STAGING ENV (multi-browser) ====================
 | Browser              | Command                        |
@@ -25,7 +25,7 @@ npx playwright install
 | All Browsers         | `npm run test:prod:all`     |
 | A specific tests     | `ENV=prod npx playwright test tests/search.spec.ts`|
 
-====================== REPORTS ========================================
+====================== REPORTS =======================
 | Action              | Command                                    |
 | -------------------- | ----------------------------------------- |
 | Clean Allure & Playwright reports and results | `npm run clean`  |
