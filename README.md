@@ -3,8 +3,9 @@
 ## 📦 Quick Start
 
 ### 1️⃣ Install dependencies
-`npm install`
-`npx playwright install`
+```bash
+npm install
+npx playwright install
 
 ====================== STAGING ENV (multi-browser) ====================
 | Browser              | Command                        |
