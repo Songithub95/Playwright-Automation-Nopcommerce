@@ -26,6 +26,8 @@ npx playwright install
 | A specific tests     | `ENV=prod npx playwright test tests/search.spec.ts`|
 
 ====================== REPORTS ======================
+
+Clean Allure & Playwright reports and results: `npm run clean`
 Open the Playwright HTML report: `npm run report`
 Open Allure report: `npm run report:allure`
 
