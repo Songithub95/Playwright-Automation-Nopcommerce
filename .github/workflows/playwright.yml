@@ -1,0 +1,17 @@
+name: Playwright Tests
+on:
+  schedule:
+    - cron: '23 23 * * *' # runs daily; adjust for 6:00 AM VN if needed
+  push:
+    branches: [ main ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm ci
+      - run: npx playwright install --with-deps
+      - run: npx playwright test --reporter=list,html,allure-playwright
