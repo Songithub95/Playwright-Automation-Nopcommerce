@@ -6,6 +6,8 @@
 ```bash
 npm install
 npx playwright install
+======================================================================
+Set headless with false in playwright.config.ts file to run tests with headed mode in local machine.
 
 ====================== STAGING ENV (multi-browser) ====================
 | Browser              | Command                        |

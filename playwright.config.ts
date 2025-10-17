@@ -12,7 +12,7 @@ export default defineConfig({
   reporter: [["html", { open: "never" }], ["allure-playwright"]],
   use: {
     baseURL: envConfig.baseURL,
-    headless: false,
+    headless: true,
     trace: "on-first-retry",
     screenshot: "only-on-failure",
     video: "on",
