@@ -1,0 +1,418 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - status
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - link "Skip navigation" [ref=e4] [cursor=pointer]:
+        - /url: "#main"
+      - generic [ref=e5]:
+        - combobox "Currency selector" [ref=e8]:
+          - option "US Dollar" [selected]
+          - option "Euro"
+        - list [ref=e11]:
+          - listitem [ref=e12]:
+            - link "Register" [ref=e13] [cursor=pointer]:
+              - /url: /register?returnUrl=%2Fnotebooks
+          - listitem [ref=e14]:
+            - link "Log in" [ref=e15] [cursor=pointer]:
+              - /url: /login?returnUrl=%2Fnotebooks
+          - listitem [ref=e16]:
+            - link "Wishlist (0)" [ref=e17] [cursor=pointer]:
+              - /url: /wishlist
+              - generic [ref=e18]: Wishlist
+              - generic [ref=e19]: (0)
+          - listitem [ref=e20]:
+            - link "Shopping cart (0)" [ref=e21] [cursor=pointer]:
+              - /url: /cart
+              - generic [ref=e22]: Shopping cart
+              - generic [ref=e23]: (0)
+      - generic [ref=e24]:
+        - link "nopCommerce demo store" [ref=e26] [cursor=pointer]:
+          - /url: /
+          - img "nopCommerce demo store" [ref=e27]
+        - generic [ref=e29]:
+          - textbox "Search store" [ref=e30]
+          - button "Search" [ref=e31] [cursor=pointer]
+    - list [ref=e33]:
+      - listitem [ref=e34]:
+        - link "Computers" [ref=e35] [cursor=pointer]:
+          - /url: /computers
+      - listitem [ref=e36]:
+        - link "Electronics" [ref=e37] [cursor=pointer]:
+          - /url: /electronics
+      - listitem [ref=e38]:
+        - link "Apparel" [ref=e39] [cursor=pointer]:
+          - /url: /apparel
+      - listitem [ref=e40]:
+        - link "Digital downloads" [ref=e41] [cursor=pointer]:
+          - /url: /digital-downloads
+      - listitem [ref=e42]:
+        - link "Books" [ref=e43] [cursor=pointer]:
+          - /url: /books
+      - listitem [ref=e44]:
+        - link "Jewelry" [ref=e45] [cursor=pointer]:
+          - /url: /jewelry
+      - listitem [ref=e46]:
+        - link "Gift Cards" [ref=e47] [cursor=pointer]:
+          - /url: /gift-cards
+    - main [ref=e48]:
+      - generic [ref=e49]:
+        - list [ref=e51]:
+          - listitem [ref=e52]:
+            - link "Home" [ref=e53] [cursor=pointer]:
+              - /url: /
+            - generic [ref=e54]: /
+          - listitem [ref=e55]:
+            - link "Computers" [ref=e56] [cursor=pointer]:
+              - /url: /computers
+              - generic [ref=e57]: Computers
+            - generic [ref=e58]: /
+          - listitem [ref=e59]:
+            - strong [ref=e60]: Notebooks
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - strong [ref=e65]: Filter by attributes
+              - generic [ref=e66]:
+                - list [ref=e67]:
+                  - listitem [ref=e68]:
+                    - strong [ref=e69]: CPU Type
+                  - listitem [ref=e70]:
+                    - checkbox "Intel Core i5" [ref=e71]
+                    - generic [ref=e72] [cursor=pointer]: Intel Core i5
+                  - listitem [ref=e73]:
+                    - checkbox "Intel Core i7" [ref=e74]
+                    - generic [ref=e75] [cursor=pointer]: Intel Core i7
+                - list [ref=e76]:
+                  - listitem [ref=e77]:
+                    - strong [ref=e78]: Memory
+                  - listitem [ref=e79]:
+                    - checkbox "4 GB" [ref=e80]
+                    - generic [ref=e81] [cursor=pointer]: 4 GB
+                  - listitem [ref=e82]:
+                    - checkbox "8 GB" [ref=e83]
+                    - generic [ref=e84] [cursor=pointer]: 8 GB
+                  - listitem [ref=e85]:
+                    - checkbox "16 GB" [ref=e86]
+                    - generic [ref=e87] [cursor=pointer]: 16 GB
+            - generic [ref=e88]:
+              - strong [ref=e90]: Filter by manufacturer
+              - list [ref=e92]:
+                - listitem [ref=e93]:
+                  - checkbox "Apple" [ref=e94]
+                  - generic [ref=e95] [cursor=pointer]: Apple
+                - listitem [ref=e96]:
+                  - checkbox "HP" [ref=e97]
+                  - generic [ref=e98] [cursor=pointer]: HP
+          - generic [ref=e99]:
+            - strong [ref=e101]: Categories
+            - list [ref=e103]:
+              - listitem [ref=e104]:
+                - link "Computers" [ref=e105] [cursor=pointer]:
+                  - /url: /computers
+                - list [ref=e106]:
+                  - listitem [ref=e107]:
+                    - link "Desktops" [ref=e108] [cursor=pointer]:
+                      - /url: /desktops
+                  - listitem [ref=e109]:
+                    - link "Notebooks" [ref=e110] [cursor=pointer]:
+                      - /url: /notebooks
+                  - listitem [ref=e111]:
+                    - link "Software" [ref=e112] [cursor=pointer]:
+                      - /url: /software
+              - listitem [ref=e113]:
+                - link "Electronics" [ref=e114] [cursor=pointer]:
+                  - /url: /electronics
+              - listitem [ref=e115]:
+                - link "Apparel" [ref=e116] [cursor=pointer]:
+                  - /url: /apparel
+              - listitem [ref=e117]:
+                - link "Digital downloads" [ref=e118] [cursor=pointer]:
+                  - /url: /digital-downloads
+              - listitem [ref=e119]:
+                - link "Books" [ref=e120] [cursor=pointer]:
+                  - /url: /books
+              - listitem [ref=e121]:
+                - link "Jewelry" [ref=e122] [cursor=pointer]:
+                  - /url: /jewelry
+              - listitem [ref=e123]:
+                - link "Gift Cards" [ref=e124] [cursor=pointer]:
+                  - /url: /gift-cards
+          - generic [ref=e125]:
+            - strong [ref=e127]: Manufacturers
+            - generic [ref=e128]:
+              - list [ref=e129]:
+                - listitem [ref=e130]:
+                  - link "Apple" [ref=e131] [cursor=pointer]:
+                    - /url: /apple
+                - listitem [ref=e132]:
+                  - link "HP" [ref=e133] [cursor=pointer]:
+                    - /url: /hp
+              - link "View all" [ref=e135] [cursor=pointer]:
+                - /url: /manufacturer/all
+          - generic [ref=e136]:
+            - strong [ref=e138]: Popular tags
+            - generic [ref=e139]:
+              - list [ref=e141]:
+                - listitem [ref=e142]:
+                  - link "apparel" [ref=e143] [cursor=pointer]:
+                    - /url: /apparel-2
+                - listitem [ref=e144]:
+                  - link "awesome" [ref=e145] [cursor=pointer]:
+                    - /url: /awesome
+                - listitem [ref=e146]:
+                  - link "book" [ref=e147] [cursor=pointer]:
+                    - /url: /book
+                - listitem [ref=e148]:
+                  - link "camera" [ref=e149] [cursor=pointer]:
+                    - /url: /camera
+                - listitem [ref=e150]:
+                  - link "cell" [ref=e151] [cursor=pointer]:
+                    - /url: /cell
+                - listitem [ref=e152]:
+                  - link "compact" [ref=e153] [cursor=pointer]:
+                    - /url: /compact
+                - listitem [ref=e154]:
+                  - link "computer" [ref=e155] [cursor=pointer]:
+                    - /url: /computer
+                - listitem [ref=e156]:
+                  - link "cool" [ref=e157] [cursor=pointer]:
+                    - /url: /cool
+                - listitem [ref=e158]:
+                  - link "digital" [ref=e159] [cursor=pointer]:
+                    - /url: /digital
+                - listitem [ref=e160]:
+                  - link "game" [ref=e161] [cursor=pointer]:
+                    - /url: /game
+                - listitem [ref=e162]:
+                  - link "jeans" [ref=e163] [cursor=pointer]:
+                    - /url: /jeans
+                - listitem [ref=e164]:
+                  - link "jewelry" [ref=e165] [cursor=pointer]:
+                    - /url: /jewelry-2
+                - listitem [ref=e166]:
+                  - link "nice" [ref=e167] [cursor=pointer]:
+                    - /url: /nice
+                - listitem [ref=e168]:
+                  - link "shirt" [ref=e169] [cursor=pointer]:
+                    - /url: /shirt
+                - listitem [ref=e170]:
+                  - link "shoes" [ref=e171] [cursor=pointer]:
+                    - /url: /shoes-2
+              - link "View all" [ref=e173] [cursor=pointer]:
+                - /url: /producttag/all
+        - generic [ref=e175]:
+          - heading "Notebooks" [level=1] [ref=e177]
+          - generic [ref=e178]:
+            - generic [ref=e179]:
+              - generic [ref=e180]:
+                - link "Grid" [ref=e181] [cursor=pointer]:
+                  - /url: "#"
+                - link "List" [ref=e182] [cursor=pointer]:
+                  - /url: "#"
+              - generic [ref=e183]:
+                - text: Sort by
+                - combobox "Select product sort order" [ref=e184]:
+                  - option "Position" [selected]
+                  - 'option "Name: A to Z"'
+                  - 'option "Name: Z to A"'
+                  - 'option "Price: Low to High"'
+                  - 'option "Price: High to Low"'
+                  - option "Created on"
+              - generic [ref=e185]:
+                - text: Display
+                - combobox "Select number of products per page" [ref=e186]:
+                  - option "3"
+                  - option "6" [selected]
+                  - option "9"
+                - text: per page
+            - generic [ref=e190]:
+              - generic [ref=e192]:
+                - link "Picture of Apple MacBook Pro" [ref=e194] [cursor=pointer]:
+                  - /url: /apple-macbook-pro
+                  - img "Picture of Apple MacBook Pro" [ref=e195]
+                - generic [ref=e196]:
+                  - heading "Apple MacBook Pro" [level=2] [ref=e197]:
+                    - link "Apple MacBook Pro" [ref=e198] [cursor=pointer]:
+                      - /url: /apple-macbook-pro
+                  - generic "1 review(s)" [ref=e199]
+                  - generic [ref=e202]:
+                    - generic [ref=e203]: $1,800.00
+                    - generic [ref=e204]:
+                      - button "Add to cart" [ref=e205] [cursor=pointer]
+                      - button "Add to compare list" [ref=e206] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e207] [cursor=pointer]
+              - generic [ref=e209]:
+                - link "Picture of Asus Laptop" [ref=e211] [cursor=pointer]:
+                  - /url: /asus-laptop
+                  - img "Picture of Asus Laptop" [ref=e212]
+                - generic [ref=e213]:
+                  - heading "Asus Laptop" [level=2] [ref=e214]:
+                    - link "Asus Laptop" [ref=e215] [cursor=pointer]:
+                      - /url: /asus-laptop
+                  - generic "1 review(s)" [ref=e216]
+                  - generic [ref=e219]:
+                    - generic [ref=e220]: $1,500.00
+                    - generic [ref=e221]:
+                      - button "Add to cart" [ref=e222] [cursor=pointer]
+                      - button "Add to compare list" [ref=e223] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e224] [cursor=pointer]
+              - generic [ref=e226]:
+                - link "Picture of HP Envy 15.6-Inch Sleekbook" [ref=e228] [cursor=pointer]:
+                  - /url: /hp-envy-156-inch-sleekbook
+                  - img "Picture of HP Envy 15.6-Inch Sleekbook" [ref=e229]
+                - generic [ref=e230]:
+                  - heading "HP Envy 15.6-Inch Sleekbook" [level=2] [ref=e231]:
+                    - link "HP Envy 15.6-Inch Sleekbook" [ref=e232] [cursor=pointer]:
+                      - /url: /hp-envy-156-inch-sleekbook
+                  - generic "1 review(s)" [ref=e233]
+                  - generic [ref=e236]:
+                    - generic [ref=e237]: $1,460.00
+                    - generic [ref=e238]:
+                      - button "Add to cart" [ref=e239] [cursor=pointer]
+                      - button "Add to compare list" [ref=e240] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e241] [cursor=pointer]
+              - generic [ref=e243]:
+                - link "Picture of HP Spectre XT Pro UltraBook" [ref=e245] [cursor=pointer]:
+                  - /url: /hp-spectre-xt-pro-ultrabook
+                  - img "Picture of HP Spectre XT Pro UltraBook" [ref=e246]
+                - generic [ref=e247]:
+                  - heading "HP Spectre XT Pro UltraBook" [level=2] [ref=e248]:
+                    - link "HP Spectre XT Pro UltraBook" [ref=e249] [cursor=pointer]:
+                      - /url: /hp-spectre-xt-pro-ultrabook
+                  - generic "1 review(s)" [ref=e250]
+                  - generic [ref=e253]:
+                    - generic [ref=e254]: $1,350.00
+                    - generic [ref=e255]:
+                      - button "Add to cart" [ref=e256] [cursor=pointer]
+                      - button "Add to compare list" [ref=e257] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e258] [cursor=pointer]
+              - generic [ref=e260]:
+                - link "Picture of Lenovo Thinkpad Carbon Laptop" [ref=e262] [cursor=pointer]:
+                  - /url: /lenovo-thinkpad-carbon-laptop
+                  - img "Picture of Lenovo Thinkpad Carbon Laptop" [ref=e263]
+                - generic [ref=e264]:
+                  - heading "Lenovo Thinkpad Carbon Laptop" [level=2] [ref=e265]:
+                    - link "Lenovo Thinkpad Carbon Laptop" [ref=e266] [cursor=pointer]:
+                      - /url: /lenovo-thinkpad-carbon-laptop
+                  - generic "1 review(s)" [ref=e267]
+                  - generic [ref=e270]:
+                    - generic [ref=e271]: $1,360.00
+                    - generic [ref=e272]:
+                      - button "Add to cart" [ref=e273] [cursor=pointer]
+                      - button "Add to compare list" [ref=e274] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e275] [cursor=pointer]
+              - generic [ref=e277]:
+                - link "Picture of Samsung Premium Ultrabook" [ref=e279] [cursor=pointer]:
+                  - /url: /samsung-premium-ultrabook
+                  - img "Picture of Samsung Premium Ultrabook" [ref=e280]
+                - generic [ref=e281]:
+                  - heading "Samsung Premium Ultrabook" [level=2] [ref=e282]:
+                    - link "Samsung Premium Ultrabook" [ref=e283] [cursor=pointer]:
+                      - /url: /samsung-premium-ultrabook
+                  - generic "1 review(s)" [ref=e284]
+                  - generic [ref=e287]:
+                    - generic [ref=e288]: $1,590.00
+                    - generic [ref=e289]:
+                      - button "Add to cart" [ref=e290] [cursor=pointer]
+                      - button "Add to compare list" [ref=e291] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e292] [cursor=pointer]
+    - generic [ref=e293]:
+      - generic [ref=e294]:
+        - generic [ref=e295]:
+          - strong [ref=e297]: Information
+          - list [ref=e298]:
+            - listitem [ref=e299]:
+              - link "Sitemap" [ref=e300] [cursor=pointer]:
+                - /url: /sitemap
+            - listitem [ref=e301]:
+              - link "Shipping & returns" [ref=e302] [cursor=pointer]:
+                - /url: /shipping-returns
+            - listitem [ref=e303]:
+              - link "Privacy notice" [ref=e304] [cursor=pointer]:
+                - /url: /privacy-notice
+            - listitem [ref=e305]:
+              - link "Conditions of Use" [ref=e306] [cursor=pointer]:
+                - /url: /conditions-of-use
+            - listitem [ref=e307]:
+              - link "About us" [ref=e308] [cursor=pointer]:
+                - /url: /about-us
+            - listitem [ref=e309]:
+              - link "Contact us" [ref=e310] [cursor=pointer]:
+                - /url: /contactus
+        - generic [ref=e311]:
+          - strong [ref=e313]: Customer service
+          - list [ref=e314]:
+            - listitem [ref=e315]:
+              - link "Search" [ref=e316] [cursor=pointer]:
+                - /url: /search
+            - listitem [ref=e317]:
+              - link "News" [ref=e318] [cursor=pointer]:
+                - /url: /news
+            - listitem [ref=e319]:
+              - link "Blog" [ref=e320] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e321]:
+              - link "Recently viewed products" [ref=e322] [cursor=pointer]:
+                - /url: /recentlyviewedproducts
+            - listitem [ref=e323]:
+              - link "Compare products list" [ref=e324] [cursor=pointer]:
+                - /url: /compareproducts
+            - listitem [ref=e325]:
+              - link "New products" [ref=e326] [cursor=pointer]:
+                - /url: /newproducts
+        - generic [ref=e327]:
+          - strong [ref=e329]: My account
+          - list [ref=e330]:
+            - listitem [ref=e331]:
+              - link "My account" [ref=e332] [cursor=pointer]:
+                - /url: /customer/info
+            - listitem [ref=e333]:
+              - link "Orders" [ref=e334] [cursor=pointer]:
+                - /url: /order/history
+            - listitem [ref=e335]:
+              - link "Addresses" [ref=e336] [cursor=pointer]:
+                - /url: /customer/addresses
+            - listitem [ref=e337]:
+              - link "Shopping cart" [ref=e338] [cursor=pointer]:
+                - /url: /cart
+            - listitem [ref=e339]:
+              - link "Wishlist" [ref=e340] [cursor=pointer]:
+                - /url: /wishlist
+            - listitem [ref=e341]:
+              - link "Apply for vendor account" [ref=e342] [cursor=pointer]:
+                - /url: /vendor/apply
+        - generic [ref=e343]:
+          - generic [ref=e344]:
+            - strong [ref=e346]: Follow us
+            - list [ref=e347]:
+              - listitem [ref=e348]:
+                - link "Facebook" [ref=e349] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nopCommerce
+              - listitem [ref=e350]:
+                - link "Twitter" [ref=e351] [cursor=pointer]:
+                  - /url: https://twitter.com/nopCommerce
+              - listitem [ref=e352]:
+                - link "RSS" [ref=e353] [cursor=pointer]:
+                  - /url: /news/rss/1
+              - listitem [ref=e354]:
+                - link "YouTube" [ref=e355] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/nopCommerce
+              - listitem [ref=e356]:
+                - link "Instagram" [ref=e357] [cursor=pointer]:
+                  - /url: https://www.instagram.com/nopcommerce_official
+          - generic [ref=e358]:
+            - strong [ref=e360]: Newsletter
+            - generic [ref=e362]:
+              - textbox "Sign up for our newsletter" [ref=e363]:
+                - /placeholder: Enter your email here...
+              - button "Subscribe" [ref=e364] [cursor=pointer]
+      - generic [ref=e365]:
+        - generic [ref=e366]: Copyright © 2025 nopCommerce demo store. All rights reserved.
+        - generic [ref=e367]:
+          - text: Powered by
+          - link "nopCommerce" [ref=e368] [cursor=pointer]:
+            - /url: https://www.nopcommerce.com/
+```
