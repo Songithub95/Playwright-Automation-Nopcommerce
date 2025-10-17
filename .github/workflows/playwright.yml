@@ -102,12 +102,25 @@ jobs:
           mkdir -p combined-report/playwright
           cp -r allure-report/* combined-report/allure/ || true
           cp -r playwright-report/* combined-report/playwright/ || true
+          echo "Combined reports prepared at ./combined-report"
 
       - name: Deploy Reports to GitHub Pages
         if: always()
+        id: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./combined-report
           publish_branch: gh-pages
           force_orphan: true
+
+      - name: Show report URLs
+        if: always()
+        run: |
+          echo ""
+          echo "Deployment completed successfully!"
+          echo "Playwright HTML Report:"
+          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/playwright/"
+          echo ""
+          echo "Allure Report:"
+          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/allure/"
