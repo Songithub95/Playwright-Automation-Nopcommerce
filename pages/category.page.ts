@@ -30,8 +30,8 @@ export class CategoryPage extends BasePage {
   }
 
   async sortBy(option: string) {
-    const el = this.sortSelect.selectOption(option);
-    await el;
+    const el = await this.sortSelect.selectOption(option);
+    return el;
   }
 
   async getAllPrices(): Promise<number[]> {
