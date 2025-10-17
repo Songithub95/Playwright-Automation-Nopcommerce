@@ -1,4 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","4687","Explore category: sort and filter","Firefox","Fri Oct 17 12:51:23 ICT 2025","failed","Fri Oct 17 12:51:27 ICT 2025","","explore-category.spec.ts","",""
-"","25447","Explore category: sort and filter","Chromium","Fri Oct 17 12:51:28 ICT 2025","failed","Fri Oct 17 12:51:53 ICT 2025","","explore-category.spec.ts","",""
-"","3499","Explore category: sort and filter","WebKit","Fri Oct 17 12:51:49 ICT 2025","failed","Fri Oct 17 12:51:53 ICT 2025","","explore-category.spec.ts","",""

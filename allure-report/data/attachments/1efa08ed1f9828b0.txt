@@ -1,5 +1,0 @@
-[2025-10-17T05:51:20.423Z] [INFO] Navigate to web page
-[2025-10-17T05:51:20.423Z] [INFO] Navigating to https://demo.nopcommerce.com/
-[2025-10-17T05:51:21.177Z] [INFO] Hover Computers
-[2025-10-17T05:51:21.324Z] [INFO] Select Notebooks
-[2025-10-17T05:51:21.970Z] [INFO] Sort by Low to High
