@@ -14,4 +14,6 @@ jobs:
           node-version: 18
       - run: npm ci
       - run: npx playwright install --with-deps
-      - run: npx playwright test --reporter=list,html,allure-playwright
+      - run: npx playwright test --reporter=list,html,allure-playwright --headed=false
+        env:
+          CI: true
