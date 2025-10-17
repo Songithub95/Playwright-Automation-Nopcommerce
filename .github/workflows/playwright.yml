@@ -1,11 +1,12 @@
 name: Playwright Tests
+
 on:
   schedule:
-    - cron: '23 23 * * *' # runs daily; adjust for 6:00 AM VN if needed
+    - cron: '0 23 * * *' # chạy mỗi ngày lúc 6h sáng VN (GMT+7 = 23h UTC)
   workflow_dispatch:
-   inputs:
+    inputs:
       env:
-        description: "Chọn môi trường chạy test"
+        description: "Select test environment"
         required: true
         default: "staging"
         type: choice
@@ -13,7 +14,7 @@ on:
           - staging
           - prod
       browser:
-        description: "Chọn browser để chạy test"
+        description: "Select Browser"
         required: true
         default: "all"
         type: choice
@@ -22,31 +23,57 @@ on:
           - chrome
           - firefox
           - webkit
-  pull_request:          
+  pull_request:
     branches: [ main ]
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
-          node-version: 23
-      - run: |
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
           npm ci
           npx playwright install --with-deps
-      - name: Run selected Playwright test
+
+      - name: Determine environment and browser
+        id: set-vars
         run: |
-          echo "Running tests on ${{ github.event.inputs.env }} with browser ${{ github.event.inputs.browser }}"
-          
-          if [ "${{ github.event.inputs.browser }}" = "all" ]; then
-            npm run test:${{ github.event.inputs.env }}:all
-          elif [ "${{ github.event.inputs.browser }}" = "chrome" ]; then
-            npm run test:${{ github.event.inputs.env }}:chrome
-          elif [ "${{ github.event.inputs.browser }}" = "firefox" ]; then
-            npm run test:${{ github.event.inputs.env }}:firefox
-          elif [ "${{ github.event.inputs.browser }}" = "webkit" ]; then
-            npm run test:${{ github.event.inputs.env }}:webkit
+          ENV_INPUT="${{ github.event.inputs.env }}"
+          BROWSER_INPUT="${{ github.event.inputs.browser }}"
+
+          if [ -z "$ENV_INPUT" ]; then
+            ENV_INPUT="staging"
+          fi
+          if [ -z "$BROWSER_INPUT" ]; then
+            BROWSER_INPUT="all"
+          fi
+
+          echo "env=$ENV_INPUT" >> $GITHUB_OUTPUT
+          echo "browser=$BROWSER_INPUT" >> $GITHUB_OUTPUT
+          echo "Environment: $ENV_INPUT"
+          echo "Browser: $BROWSER_INPUT"
+
+      - name: Run Playwright tests
+        run: |
+          echo "Running tests on ${{ steps.set-vars.outputs.env }} using ${{ steps.set-vars.outputs.browser }}"
+
+          if [ "${{ steps.set-vars.outputs.browser }}" = "all" ]; then
+            npm run test:${{ steps.set-vars.outputs.env }}:all
+          elif [ "${{ steps.set-vars.outputs.browser }}" = "chrome" ]; then
+            npm run test:${{ steps.set-vars.outputs.env }}:chrome
+          elif [ "${{ steps.set-vars.outputs.browser }}" = "firefox" ]; then
+            npm run test:${{ steps.set-vars.outputs.env }}:firefox
+          elif [ "${{ steps.set-vars.outputs.browser }}" = "webkit" ]; then
+            npm run test:${{ steps.set-vars.outputs.env }}:webkit
           else
             echo "Invalid input"
             exit 1
@@ -60,7 +87,7 @@ jobs:
         with:
           name: html-report
           path: playwright-report
-      
+
       - name: Upload Allure Report
         if: always()
         uses: actions/upload-artifact@v4
@@ -69,32 +96,16 @@ jobs:
           path: allure-report
 
       - name: Prepare combined report folder
-        if: always()    
+        if: always()
         run: |
           mkdir -p combined-report/allure
           mkdir -p combined-report/playwright
           cp -r allure-report/* combined-report/allure/ || true
           cp -r playwright-report/* combined-report/playwright/ || true
 
-      - name: Load test report history
-        uses: actions/checkout@v3
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Build test report
-        uses: simple-elf/allure-report-action@v1.7
-        if: always()
-        with:
-          gh_pages: gh-pages
-          allure_history: allure-history
-          allure_results: build/allure-results
-
       - name: Deploy Reports to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
         if: always()
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./combined-report
